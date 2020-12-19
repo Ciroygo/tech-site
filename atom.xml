@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Ciroy的技术笔记]]></title>
+  <link href="http://www.own6.com/atom.xml" rel="self"/>
+  <link href="http://www.own6.com/"/>
+  <updated>2020-12-19T22:56:48+08:00</updated>
+  <id>http://www.own6.com/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://www.coderforart.com/">CoderForArt</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Docker资料大全]]></title>
+    <link href="http://www.own6.com/16081363724787.html"/>
+    <updated>2020-12-17T00:32:52+08:00</updated>
+    <id>http://www.own6.com/16081363724787.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">教程</h2>
+
+<p><a href="https://vuepress.mirror.docker-practice.com/">Docker — 从入门到实践</a></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[入门]]></title>
+    <link href="http://www.own6.com/16080978557475.html"/>
+    <updated>2020-12-16T13:50:55+08:00</updated>
+    <id>http://www.own6.com/16080978557475.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">Hello,World</h2>
+
+<p>hello.go</p>
+
+<pre><code class="language-golang">package main 包名
+
+import &quot;fmt&quot; 标准库
+
+func main() {
+    fmt.PrintIn(&quot;hello, 世界&quot;);
+}
+</code></pre>
+
+<ul>
+<li>运行 go run hello.go</li>
+<li>编译 go build hello.go
+<ul>
+<li>bin 文件夹内</li>
+</ul></li>
+<li>go get gopl.io/ch1/helloworld 拉远程库</li>
+</ul>
+
+<h3 id="toc_1">main为主函数</h3>
+
+<p>入口</p>
+
+<p><code>注意：Go语言不需要在语句或者声明的末尾添加分号</code></p>
+
+<p>这意味着换行符会作为一个语句的解析结束符号</p>
+
+<ul>
+<li>函数的左括号{必须和func函数声明在同一行上</li>
+<li>x + y中，可在+后换行，不能在+前换行</li>
+</ul>
+
+<p>go语言在代码格式上采取了强硬风格。gofmt工具把代码格式化为标准格式</p>
+
+<h3 id="toc_2">packages</h3>
+
+<ul>
+<li>gofmt 格式化代码包</li>
+<li>goimports 自动地添加或删除import声明</li>
+<li>strings 字符串包 <code>strings.Join(os.Args[1:], &quot; &quot;)</code></li>
+</ul>
+
+<h2 id="toc_3">命令行参数</h2>
+
+<ul>
+<li>// 注释</li>
+<li>os.Args 命令行参数
+<ul>
+<li>os.Args[0] 命令本身的名字</li>
+<li>os.Args[1, len(os.Args)] 参数</li>
+</ul></li>
+<li>var a,b string 隐性赋值零值，数值类型是0，字符串类型是&#39;&#39;, 字符串连接符 <code>+</code></li>
+<li><code>:=</code> 短变量声明</li>
+<li>只允许 i++ ,因为这也是语句，<code>++i</code>、<code>j = i++</code> 不合法</li>
+<li>for 语句</li>
+</ul>
+
+<pre><code class="language-golang">for initialization; condition; post {
+    // zero or more statements
+}
+</code></pre>
+
+<p>for语句可以不使用任何参数，代表无限循环</p>
+
+<pre><code class="language-golang">for {
+
+}
+</code></pre>
+
+<ul>
+<li>空标识符 <code>_</code> 空标识符可用于任何语法需要变量名但程序逻辑不需要的时候</li>
+</ul>
+
+<pre><code class="language-golang">func main() {
+    s, sep := &quot;&quot;, &quot;&quot;
+    for _, arg := range os.Args[1:] {
+        s += sep + arg
+        sep = &quot; &quot;
+    }
+    fmt.Println(s)
+}
+</code></pre>
+
+<ul>
+<li>变量声明</li>
+</ul>
+
+<p>s := &quot;&quot;  最简洁，只能用在函数内部，不能用于包变量. 该方式常用<br/>
+var s string 声明被初始化为&#39;&#39;  该方式常用<br/>
+var s = &quot;&quot;  用得很少，一般除非同时声明多个变量 var a,b = &quot;&quot;, &quot;&quot;<br/>
+var s string = &quot;&quot; 显式地标明变量的类型 <code>? 什么时候用</code></p>
+
+<h2 id="toc_4">查找重复的行</h2>
+
+<h3 id="toc_5">打印标准输入中多次出现的行，以重复次数开头</h3>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[前言]]></title>
+    <link href="http://www.own6.com/16080843168041.html"/>
+    <updated>2020-12-16T10:05:16+08:00</updated>
+    <id>http://www.own6.com/16080843168041.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">起源</h2>
+
+<h3 id="toc_1">Go语言有时候被描述为“C类似语言”，或者是“21世纪的C语言”。</h3>
+
+<p>Go从C语言继承了相似的表达式语法、控制流结构、基础数据类型、调用参数传值、指针等很多思想，还有C语言一直所看中的编译后机器码的运行效率以及和现有操作系统的无缝适配。</p>
+
+<h3 id="toc_2">Go语言借鉴了很多种语言的特性</h3>
+
+<h2 id="toc_3">Go语言项目</h2>
+
+<h3 id="toc_4">编译型语言</h3>
+
+<h3 id="toc_5">Go编程语言本身</h3>
+
+<ul>
+<li>拥有自动垃圾回收、一个包系统、函数作为一等公民、词法作用域、系统调用接口、只读的UTF8字符串等
+<ul>
+<li>Go语言本身只有很少的特性，也不太可能添加太多的特性。没有隐式的数值转换，没有构造函数和析构函数，没有运算符重载，没有默认参数，也没有继承，没有泛型，没有异常，没有宏，没有函数修饰，更没有线程局部存储</li>
+</ul></li>
+<li>语言本身是成熟和稳定的，而且承诺保证向后兼容。<br/>
+### 类型系统<br/>
+Go语言有足够的类型系统以避免动态语言中那些粗心的类型错误，但是，Go语言的类型系统相比传统的强类型语言又要简洁很多。<br/>
+### Go语言鼓励当代计算机系统设计的原则，特别是局部的重要性。<br/>
+CSP<br/>
+### Go语言的标准库（通常被称为语言自带的电池），提供了清晰的构建模块和公共接口，包含I/O操作、文本处理、图像、密码学、网络和分布式应用程序等，并支持许多标准化的文件格式和编解码协议</li>
+</ul>
+
+<h2 id="toc_6">环境配置</h2>
+
+<p>export GOPATH=$HOME/gobook # 选择工作目录</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Go 资料大全]]></title>
+    <link href="http://www.own6.com/16071597989635.html"/>
+    <updated>2020-12-05T17:16:38+08:00</updated>
+    <id>http://www.own6.com/16071597989635.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">教程</h2>
+
+<p><a href="https://docs.hacknode.org/gopl-zh/index.html">Go语言圣经</a> 基础<br/>
+<a href="https://www.runoob.com/go/go-tutorial.html">Go 语言教程 菜鸟教程</a> 基础<br/>
+<a href="https://learnku.com/go/wikis/38166">A tour of Go（含中文）</a> 基础 - 官方本地教程<br/>
+<a href="https://learnku.com/docs/gorm/v2">GORM 中文文档 </a> 基础 - DB ORM 库<br/>
+<a href="Go%E8%AF%AD%E8%A8%80%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B">Go语言高级编程</a> 进阶<br/>
+<a href="https://draveness.me/golang/">Go 语言设计与实现</a> 进阶<br/>
+<a href="https://learnku.com/docs/effective-go/2020">官方《Effective Go》 中文版</a> 进阶 - 技巧规范篇<br/>
+<a href="https://github.com/chai2010/go2-book#go2%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97">Go2编程指南</a> 进阶 - 新版本讲解<br/>
+<a href="https://github.com/chai2010/go-ast-book">Go语法树入门——开启自制编程语言和编译器之旅！</a> 深入高级</p>
+
+<p><a href="https://learnku.com/courses/go-basic/1.15">G01 Go 实战：Web 入门</a> 79元 未购买</p>
+
+<h2 id="toc_1">书籍</h2>
+
+<h2 id="toc_2">Roadmap</h2>
+
+<p><img src="media/16071597989635/16080873385090.jpg" alt=""/></p>
+
+<p><img src="media/16071597989635/16076556833637.jpg" alt=""/></p>
+
+<h1 id="toc_3">学习 Go 的理由</h1>
+
+<ul>
+<li>强类型语言，后段返回数据，前端不容易报错</li>
+<li>协作方面，GO程序写好不容易出错</li>
+<li>CI 集成更友好</li>
+<li>原生并发支持</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mysql资料大全]]></title>
+    <link href="http://www.own6.com/16068414066670.html"/>
+    <updated>2020-12-02T00:50:06+08:00</updated>
+    <id>http://www.own6.com/16068414066670.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">书籍</h2>
+
+<ul>
+<li>mysql 8 cookbook</li>
+<li>（欠缺深入的资料）</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[PHP资料大全]]></title>
+    <link href="http://www.own6.com/16068411023326.html"/>
+    <updated>2020-12-02T00:45:02+08:00</updated>
+    <id>http://www.own6.com/16068411023326.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">书籍</h2>
+
+<ul>
+<li>脑动力</li>
+<li>PHP7底层设计与源码实现</li>
+<li>PHP核心技术与最佳实践</li>
+<li>PHP和mysql web开发（圣经）</li>
+<li>Modern PHP</li>
+<li>（php 设计模式）</li>
+</ul>
+
+<h2 id="toc_1">教程</h2>
+
+<ul>
+<li><a href="https://learnku.com/laravel/courses">learnku.com</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[测试]]></title>
+    <link href="http://www.own6.com/ce-shi-ce-shi-tu-pianavatarw60.html"/>
+    <updated>2020-11-24T10:55:14+08:00</updated>
+    <id>http://www.own6.com/ce-shi-ce-shi-tu-pianavatarw60.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">测试图片</h2>
+
+<p><img src="media/16061865140701/16083865926268.jpg" alt=""/></p>
+
+<p><img src="media/16061865140701/avatar.png" alt="avatar" style="width:60px;"/></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[杂项]]></title>
+    <link href="http://www.own6.com/16079988721167.html"/>
+    <updated>2020-12-15T10:21:12+08:00</updated>
+    <id>http://www.own6.com/16079988721167.html</id>
+    <content type="html"><![CDATA[
+<ul>
+<li>nohup 不挂断地运行命令
+<ul>
+<li>语法：nohup Command [arg ...][ &amp;]
+<ul>
+<li>例子：nohup command &gt; myout.file 2&gt;&amp;1 &amp;</li>
+<li>jobs 查看任务</li>
+<li>fg %n 关闭</li>
+</ul></li>
+</ul></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[常用必须掌握的linux命令]]></title>
+    <link href="http://www.own6.com/16060326802164.html"/>
+    <updated>2020-11-22T16:11:20+08:00</updated>
+    <id>http://www.own6.com/16060326802164.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">查看帮助命令</h2>
+
+<ul>
+<li>命令的长格式（man --help）和短格式（man -h）</li>
+<li><code>/a</code>从上往下搜索某个关键词 </li>
+<li><code>?a</code>从下往上搜索某个关键词 </li>
+<li><code>n</code>定位到一个搜索词语,<code>N</code>定位上一个搜索词</li>
+</ul>
+
+<h2 id="toc_1">常用系统工作命令</h2>
+
+<ul>
+<li><code>echo</code> 输出值或者变量值</li>
+</ul>
+
+<p><code>echo ciroygo</code> 输出字符串<br/>
+<code>echo $SHELL</code> 输出变量</p>
+
+<ul>
+<li><code>date</code> 显示或者设置系统时间</li>
+</ul>
+
+<p><code>date &quot;+%Y-%m-%d&quot;</code> 日期格式显示<br/>
+<code>date -s &quot;20200901 8:30:00&quot;</code> 系统时间设置    </p>
+
+<ul>
+<li>reboot 重启系统</li>
+<li>poweroff 关机</li>
+<li>wget 下载 <code>wget http://baidu.com</code>
+<ul>
+<li>-b 后台下载</li>
+<li>-P 下载到指定目录</li>
+<li>-t 最大尝试次数</li>
+<li>-c 断点续传</li>
+<li>-p 下载页面所有资源，包括图片视频等</li>
+</ul></li>
+<li>ps 查看进程状态<br/>
+    ps -a<br/>
+    ps -u<br/>
+    ps -x<br/>
+    ps aux 命令参数 短格式与短格式可以合并 <code>ps aux</code></li>
+<li>top 查看系统活动与系统负载等信息</li>
+<li>pidof 查看某个服务进程的PID值 <code>pidof sshd</code></li>
+<li>kill 终止某个pid服务进程 <code>kill php</code></li>
+<li>killall 终止某个服务进程的全部进程</li>
+</ul>
+
+<h2 id="toc_2">系统状态检测命令</h2>
+
+<ul>
+<li>ifconfig 获取网卡配置与网络连接等信息</li>
+<li>uname 获取系统信息<br/>
+详细信息 <code>uname -a</code></li>
+<li>uptime 获取系统负载信息</li>
+<li>free 内存使用量信息<br/>
+free -h</li>
+<li>who 当前用户</li>
+<li>last 查看登陆记录</li>
+<li>history 查看命令历史命令<br/>
+历史命令被保存在.bash_history 中<br/>
+history -c 清空所有历史记录<br/>
+!xxx 重复执行某个命令</li>
+<li>sosreport 系统诊断，不常用</li>
+<li>hostname 显示当前主机名 /etc/hostname 修改主机名</li>
+</ul>
+
+<h2 id="toc_3">工作目录切换命令</h2>
+
+<ul>
+<li>pwd 当前目录</li>
+<li>cd <br/>
+上一次目录 <code>cd -</code> <br/>
+上一层目录 <code>cd ..</code></li>
+<li>ls <code>-a</code> 查看全部文件(含隐藏) <code>-l</code>查看文件的属性、大小等信息 <code>-d</code> 目录属性属性<br/>
+ls -al<br/>
+ls -d</li>
+</ul>
+
+<h2 id="toc_4">文本文件编辑命令</h2>
+
+<ul>
+<li>cat 查看少量文本<br/>
+cat -n xx.txt 显示行号</li>
+<li>more 查看较多文本<br/>
+空格或者回车键会翻页</li>
+<li>head 查看前-n 行<br/>
+head -n 20 xxx.txt</li>
+<li>tail<br/>
+tail -n 20 xxx.txt 显示后20行内容<br/>
+tail -f xxx.txt  实时刷新</li>
+<li>tr [a-z] [A-Z] 替换字符</li>
+<li>wc -lwc xxx.txt<br/>
+行数<code>-l</code> 单词数 <code>-w</code> 字节数 <code>-c</code></li>
+<li>stat xxx.txt 查看文件的具体存储信息和时间信息</li>
+<li>cut 按列提取文本
+<code>cut -d: -f1 /etc/passwd</code>
+-d 间隔符号 -f 第几列</li>
+<li>diff 比较多个文本的差异<br/>
+diff --brief a.txt b.txt  获取结果<br/>
+diff -c a.txt b.txt   获取详细不同明细</li>
+</ul>
+
+<h2 id="toc_5">文件目录管理命令</h2>
+
+<ul>
+<li>touch 创建空白文件或设置文件的时间<br/>
+touch abc.txt 创建空白文件<br/>
+touch -a 修改读取时间（atime）<br/>
+touch -m 修改编辑时间（mtime）<br/>
+touch -d 同时修改读取和编辑时间
+<code>touch -d &#39;2018-07-07 15:30&#39; xxx.txt</code></li>
+<li>mkdir 创建目录<br/>
+mkdir -p a/b/c/d/e 嵌套目录</li>
+<li>cp 复制文件或目录 目标文件存在则询问是否覆盖，否则直接复制成功<br/>
+cp -p 保留文件属性<br/>
+cp -d <code>若对象为‘链接文件‘，则保留该文件属性</code><br/>
+cp -r 复制目录<br/>
+cp -i <code>目标文件存在询问，测试加这个参数似乎与不加一样</code><br/>
+cp -a 等于-pdr</li>
+<li>mv</li>
+<li>rm
+<code>rm -f xxx.txt</code> 强制删除文件
+<code>rm -rf /ttt</code> 强制删除目录</li>
+<li>dd 通过指定文件复制数据到指定文件
+<code>dd if=/dev/zero of=1m_file count=1 bs=1M</code>
+if 输入 of 输出  count 个数 bs 每个大小</li>
+<li>file 查看文件类型</li>
+</ul>
+
+<h2 id="toc_6">打包压缩与搜索命令</h2>
+
+<ul>
+<li>tar 解压或压缩<br/>
+tar -czvf etc.tar.gz /etc 压缩<br/>
+tar -xzvf etc.tar.gz / 解压<br/>
+参数 -c 压缩 -x 解压 -t 查看压缩包内文件 -z 使用gzip压缩 -j 使用bzip2压缩 -v 显示压缩或解压过程 -f 解压或压缩的文件名 -p 保留原始权限 -P 使用绝对路径来压缩 -C 指定解压目录</li>
+<li><p>grep  文本搜索<br/>
+<code>grep /nologin /etc/passwd</code><br/>
+grep -n 显示行号<br/>
+grep -v 除了搜索词以外的所有行，反选<br/>
+grep -i 忽略大小写<br/>
+grep -b 将可执行文件当作文本文件来搜索<br/>
+grep -c 仅显示找到的行数</p></li>
+<li><p>find 文件搜索<br/>
+<code>find /home/users -name &quot;asdf&quot; -print</code><br/>
+参数 -chensichen -perm -user -group -mtime -n +n</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[前端资料大全]]></title>
+    <link href="http://www.own6.com/16068415032223.html"/>
+    <updated>2020-12-02T00:51:43+08:00</updated>
+    <id>http://www.own6.com/16068415032223.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">书籍</h2>
+
+<ul>
+<li>精通CSS</li>
+<li>Angular 即学即用</li>
+<li>HTML5与CSS3 实例教程</li>
+<li>（欠缺vue）</li>
+<li>（欠缺jquery）</li>
+<li>（欠缺html标签书籍）</li>
+</ul>
+
+<h2 id="toc_1">教程</h2>
+
+<ul>
+<li><a href="https://wangdoc.com/javascript/">网道 JavaScript</a></li>
+<li><a href="https://wangdoc.com/es6/">网道 ES6</a></li>
+<li><a href="https://wangdoc.com/html/index.html">网道 HTML</a></li>
+<li>Bootstrap</li>
+<li><a href="https://www.w3school.com.cn/html/index.asp">HTML + CSS w3cschool</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Vim编辑器与Shell命令脚本]]></title>
+    <link href="http://www.own6.com/16080408441979.html"/>
+    <updated>2020-12-15T22:00:44+08:00</updated>
+    <id>http://www.own6.com/16080408441979.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">Vim 文本编辑器</h2>
+
+<ul>
+<li>命令模式
+<ul>
+<li><code>dd</code>、<code>5dd</code>  光标开始删除5行</li>
+<li><code>yy</code>、<code>5yy</code> 光标开始复制5行</li>
+<li><code>n</code>、<code>N</code> 搜索下一个、上一个</li>
+<li><code>u</code> 撤销上一步操作</li>
+<li><code>p</code> 复制命令</li>
+</ul></li>
+<li>末行模式
+<ul>
+<li><code>:w</code> 保存</li>
+<li><code>:q</code> 退出</li>
+<li><code>:q!</code> 强制推出 <code>:wq!</code>强制保存退出</li>
+<li><code>set nu</code>、<code>set nonu</code></li>
+<li><code>:命令</code></li>
+<li><code>:整数</code> 跳转到该行</li>
+<li><code>:s/one/two</code> 光标所在行的第一个one改为two</li>
+<li><code>:s/one/two/g</code> 光标所在行的全部one改为two</li>
+<li><code>:%s/one/two/g</code> 全文所有one改为two</li>
+<li><code>?字符串</code>从下往上搜索</li>
+<li><code>/字符串</code>从上往下搜索</li>
+</ul></li>
+<li>输入模式
+<ul>
+<li><code>a</code>、<code>i</code>、<code>o</code> 光标前、光标后、往下建立一个空行编辑</li>
+</ul></li>
+</ul>
+
+<h2 id="toc_1">编写Shell脚本</h2>
+
+<h3 id="toc_2">交互式：用户输入命令立即执行</h3>
+
+<h3 id="toc_3">批处理：编写好一个shell文件，一次性执行命令</h3>
+
+<p>xx.sh</p>
+
+<pre><code class="language-text">#!/bin/bash
+# 这是注释
+pwd
+ls -al
+</code></pre>
+
+<p>bash xx.sh执行命令 或 <code>./xxx.sh</code> 需要添加执行权限</p>
+
+<h3 id="toc_4">用户参数接收</h3>
+
+<p><code>$0</code> 脚本名车给你<br/>
+<code>$#</code> 参数个数<br/>
+<code>$*</code> 所有参数显示<br/>
+<code>$1 - $n</code> 第几个参数<br/>
+<code>$?</code> 显示上一个命令的执行返回值</p>
+
+<h3 id="toc_5">判断用户的参数</h3>
+
+<ul>
+<li>判断表达式 测试语句格式:[ 条件表达式 ] <code>空格不能省</code>
+<ul>
+<li>文件测试语句</li>
+<li>逻辑测试语句</li>
+<li>整数值比较语句</li>
+<li>字符串比较语句<br/>
+## 流程控制语句<br/>
+## 计划任务服务程序</li>
+</ul></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[管道符、重定向与环境变量]]></title>
+    <link href="http://www.own6.com/16060207440873.html"/>
+    <updated>2020-11-22T12:52:24+08:00</updated>
+    <id>http://www.own6.com/16060207440873.html</id>
+    <content type="html"><![CDATA[
+<ul>
+<li><p>输入输出重定向</p>
+<ul>
+<li><p>STDIN输入重定向(0)、STDOUT标准输出重定向(1)、STDERR错误输出重定向(2)<br/>
+清空写入、追加写入<br/>
+命令 &lt; 文件<br/>
+命令 &lt;&lt; 分界符<br/>
+命令 &lt; 文件1 &gt; 文件2  文件1 作为标准输入然后标准输出到文件2</p>
+<p>命令 &gt; 文件<br/>
+命令 2&gt; 文件<br/>
+命令 &gt;&gt; 文件 标准输出重定向到文件中 （追加）<br/>
+命令 2&gt;&gt; 文件 错误输出重定向到文件中（追加）<br/>
+命令 &gt;&gt; 文件 2&gt;&amp;1 或者 &amp;&gt;&gt;  标准与错误共同追加到文件中</p></li>
+</ul></li>
+<li><p>管道命令符 <code>|</code> </p>
+<ul>
+<li>例如统计行数 ls -al ｜ wc -l</li>
+<li>例如支持翻页 ls -al ｜ more</li>
+</ul></li>
+<li><p>命令行通配符 <code>*</code> <code>?</code> <code>[abc]</code> <code>[0-9]</code></p></li>
+<li><p>常用转义字符</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[简介]]></title>
+    <link href="http://www.own6.com/16081351088651.html"/>
+    <updated>2020-12-17T00:11:48+08:00</updated>
+    <id>http://www.own6.com/16081351088651.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">概述</h2>
+
+<ul>
+<li>1999年，HTML 4.01 版发布，成为广泛接受的 HTML 标准。</li>
+<li>2014年，HTML 5 发布，这是目前正在使用的版本。</li>
+<li>HTML 语言定义网页的结构和内容，CSS 样式表定义网页的样式，JavaScript 语言定义网页与用户的互动行为。</li>
+</ul>
+
+<p>一个基本结构</p>
+
+<pre><code class="language-text">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;网页标题&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Hello World&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2 id="toc_1">基本概念</h2>
+
+<h3 id="toc_2">标签</h3>
+
+<pre><code class="language-markup">&lt;title&gt;网页标题&lt;/title&gt;
+</code></pre>
+
+<p>没有结束标签</p>
+
+<pre><code class="language-markup">&lt;meta charset=&quot;utf-8&quot;&gt;
+</code></pre>
+
+<p>标签的嵌套。</p>
+
+<pre><code class="language-markup">&lt;div&gt;&lt;p&gt;hello world&lt;/p&gt;&lt;/div&gt;
+</code></pre>
+
+<ul>
+<li>标签名大小写不敏感</li>
+<li>HTML语言忽略缩进</li>
+</ul>
+
+<h3 id="toc_3">元素</h3>
+
+<p>浏览器渲染网页时，会把 HTML 源码解析成一个标签树，每个标签都是树的一个节点（node）。这种节点就称为网页元素（element）。所以，“标签”和“元素”基本上是同义词，只是使用的场合不一样：标签是从源码角度来看，元素是从编程角度来看，比如<code>&lt;p&gt;</code>标签对应网页的<code>p</code>元素。</p>
+
+<h3 id="toc_4">块级元素，行内元素</h3>
+
+<ul>
+<li>块级元素默认占据一个独立的区域，在网页上会自动另起一行，占据 100% 的宽度。比如<code>p</code> 元素包裹的就是占据整行</li>
+<li>行内元素默认与其他元素在同一行，不产生换行。比如，<code>span</code>就是行内元素，通常用来为某些文字指定特别的样式。</li>
+</ul>
+
+<h3 id="toc_5">属性</h3>
+
+<pre><code class="language-markup">&lt;img src=&quot;demo.jpg&quot; width=&quot;500&quot;&gt;
+</code></pre>
+
+<ul>
+<li>属性名是大小写不敏感的</li>
+</ul>
+
+<h2 id="toc_6">网页的基本标签</h2>
+
+<pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3 id="toc_7"><code>&lt;!doctype&gt;</code> 告诉浏览器以h5方式解析网页</h3>
+
+<h3 id="toc_8"><code>&lt;html lang=&quot;zh-CN&quot;&gt;</code>  根元素，一个网页只能有一个<code>&lt;html&gt;</code>标签。lang 属性为默认语言</h3>
+
+<h3 id="toc_9"><code>&lt;head&gt;</code>用于放置网页的元信息，为网页渲染提供额外信息，不会展示在网页上</h3>
+
+<ul>
+<li><code>&lt;meta&gt;</code>：设置网页的元数据。</li>
+<li><code>&lt;link&gt;</code>：连接外部样式表。</li>
+<li><code>&lt;title&gt;</code>：设置网页标题。</li>
+<li><code>&lt;style&gt;</code>：放置内嵌的样式表。</li>
+<li><code>&lt;script&gt;</code>：引入脚本。</li>
+<li><code>&lt;noscript&gt;</code>：浏览器不支持脚本时，所要显示的内容。</li>
+<li><code>&lt;base&gt;</code>：设置网页内部相对 URL 的计算基准。</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
