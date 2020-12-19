@@ -4,7 +4,7 @@
   <title><![CDATA[Ciroy的技术笔记]]></title>
   <link href="http://tech.pca7.com/atom.xml" rel="self"/>
   <link href="http://tech.pca7.com/"/>
-  <updated>2020-12-20T01:34:10+08:00</updated>
+  <updated>2020-12-20T01:34:16+08:00</updated>
   <id>http://tech.pca7.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -278,14 +278,15 @@ CSP<br/>
     <id>http://tech.pca7.com/16079988721167.html</id>
     <content type="html"><![CDATA[
 <ul>
-<li>nohup 不挂断地运行命令
+<li><p>nohup 不挂断地运行命令</p>
 <ul>
-<li>语法：nohup Command [arg ...][ &amp;]
+<li><p>语法：nohup Command [arg ...][ &amp;]</p>
 <ul>
 <li>例子：nohup command &gt; myout.file 2&gt;&amp;1 &amp;</li>
 <li>jobs 查看任务</li>
 <li>fg %n 关闭</li>
-</ul></li>
+</ul>
+<p>test cammand</p></li>
 </ul></li>
 </ul>
 
