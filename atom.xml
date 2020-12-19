@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Ciroy的技术笔记]]></title>
-  <link href="http://www.own6.com/atom.xml" rel="self"/>
-  <link href="http://www.own6.com/"/>
-  <updated>2020-12-20T00:58:17+08:00</updated>
-  <id>http://www.own6.com/</id>
+  <link href="http://tech.pca7.com/atom.xml" rel="self"/>
+  <link href="http://tech.pca7.com/"/>
+  <updated>2020-12-20T01:00:49+08:00</updated>
+  <id>http://tech.pca7.com/</id>
   <author>
     <name><![CDATA[]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Docker资料大全]]></title>
-    <link href="http://www.own6.com/16081363724787.html"/>
+    <link href="http://tech.pca7.com/16081363724787.html"/>
     <updated>2020-12-17T00:32:52+08:00</updated>
-    <id>http://www.own6.com/16081363724787.html</id>
+    <id>http://tech.pca7.com/16081363724787.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">教程</h2>
 
@@ -28,9 +28,9 @@
   
   <entry>
     <title type="html"><![CDATA[入门]]></title>
-    <link href="http://www.own6.com/16080978557475.html"/>
+    <link href="http://tech.pca7.com/16080978557475.html"/>
     <updated>2020-12-16T13:50:55+08:00</updated>
-    <id>http://www.own6.com/16080978557475.html</id>
+    <id>http://tech.pca7.com/16080978557475.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">Hello,World</h2>
 
@@ -136,9 +136,9 @@ var s string = &quot;&quot; 显式地标明变量的类型 <code>? 什么时候�
   
   <entry>
     <title type="html"><![CDATA[前言]]></title>
-    <link href="http://www.own6.com/16080843168041.html"/>
+    <link href="http://tech.pca7.com/16080843168041.html"/>
     <updated>2020-12-16T10:05:16+08:00</updated>
-    <id>http://www.own6.com/16080843168041.html</id>
+    <id>http://tech.pca7.com/16080843168041.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">起源</h2>
 
@@ -176,9 +176,9 @@ CSP<br/>
   
   <entry>
     <title type="html"><![CDATA[Go 资料大全]]></title>
-    <link href="http://www.own6.com/16071597989635.html"/>
+    <link href="http://tech.pca7.com/16071597989635.html"/>
     <updated>2020-12-05T17:16:38+08:00</updated>
-    <id>http://www.own6.com/16071597989635.html</id>
+    <id>http://tech.pca7.com/16071597989635.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">教程</h2>
 
@@ -216,9 +216,9 @@ CSP<br/>
   
   <entry>
     <title type="html"><![CDATA[Mysql资料大全]]></title>
-    <link href="http://www.own6.com/16068414066670.html"/>
+    <link href="http://tech.pca7.com/16068414066670.html"/>
     <updated>2020-12-02T00:50:06+08:00</updated>
-    <id>http://www.own6.com/16068414066670.html</id>
+    <id>http://tech.pca7.com/16068414066670.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">书籍</h2>
 
@@ -232,9 +232,9 @@ CSP<br/>
   
   <entry>
     <title type="html"><![CDATA[PHP资料大全]]></title>
-    <link href="http://www.own6.com/16068411023326.html"/>
+    <link href="http://tech.pca7.com/16068411023326.html"/>
     <updated>2020-12-02T00:45:02+08:00</updated>
-    <id>http://www.own6.com/16068411023326.html</id>
+    <id>http://tech.pca7.com/16068411023326.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">书籍</h2>
 
@@ -258,9 +258,9 @@ CSP<br/>
   
   <entry>
     <title type="html"><![CDATA[测试]]></title>
-    <link href="http://www.own6.com/ce-shi-ce-shi-tu-pianavatarw60.html"/>
+    <link href="http://tech.pca7.com/ce-shi-ce-shi-tu-pianavatarw60.html"/>
     <updated>2020-11-24T10:55:14+08:00</updated>
-    <id>http://www.own6.com/ce-shi-ce-shi-tu-pianavatarw60.html</id>
+    <id>http://tech.pca7.com/ce-shi-ce-shi-tu-pianavatarw60.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">测试图片</h2>
 
@@ -272,10 +272,10 @@ CSP<br/>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[杂项3]]></title>
-    <link href="http://www.own6.com/16079988721167.html"/>
+    <title type="html"><![CDATA[杂项]]></title>
+    <link href="http://tech.pca7.com/16079988721167.html"/>
     <updated>2020-12-15T10:21:12+08:00</updated>
-    <id>http://www.own6.com/16079988721167.html</id>
+    <id>http://tech.pca7.com/16079988721167.html</id>
     <content type="html"><![CDATA[
 <ul>
 <li>nohup 不挂断地运行命令
@@ -294,9 +294,9 @@ CSP<br/>
   
   <entry>
     <title type="html"><![CDATA[常用必须掌握的linux命令]]></title>
-    <link href="http://www.own6.com/16060326802164.html"/>
+    <link href="http://tech.pca7.com/16060326802164.html"/>
     <updated>2020-11-22T16:11:20+08:00</updated>
-    <id>http://www.own6.com/16060326802164.html</id>
+    <id>http://tech.pca7.com/16060326802164.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">查看帮助命令</h2>
 
@@ -451,9 +451,9 @@ grep -c 仅显示找到的行数</p></li>
   
   <entry>
     <title type="html"><![CDATA[前端资料大全]]></title>
-    <link href="http://www.own6.com/16068415032223.html"/>
+    <link href="http://tech.pca7.com/16068415032223.html"/>
     <updated>2020-12-02T00:51:43+08:00</updated>
-    <id>http://www.own6.com/16068415032223.html</id>
+    <id>http://tech.pca7.com/16068415032223.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">书籍</h2>
 
@@ -481,9 +481,9 @@ grep -c 仅显示找到的行数</p></li>
   
   <entry>
     <title type="html"><![CDATA[Vim编辑器与Shell命令脚本]]></title>
-    <link href="http://www.own6.com/16080408441979.html"/>
+    <link href="http://tech.pca7.com/16080408441979.html"/>
     <updated>2020-12-15T22:00:44+08:00</updated>
-    <id>http://www.own6.com/16080408441979.html</id>
+    <id>http://tech.pca7.com/16080408441979.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">Vim 文本编辑器</h2>
 
@@ -559,9 +559,9 @@ ls -al
   
   <entry>
     <title type="html"><![CDATA[管道符、重定向与环境变量]]></title>
-    <link href="http://www.own6.com/16060207440873.html"/>
+    <link href="http://tech.pca7.com/16060207440873.html"/>
     <updated>2020-11-22T12:52:24+08:00</updated>
-    <id>http://www.own6.com/16060207440873.html</id>
+    <id>http://tech.pca7.com/16060207440873.html</id>
     <content type="html"><![CDATA[
 <ul>
 <li><p>输入输出重定向</p>
@@ -591,9 +591,9 @@ ls -al
   
   <entry>
     <title type="html"><![CDATA[简介]]></title>
-    <link href="http://www.own6.com/16081351088651.html"/>
+    <link href="http://tech.pca7.com/16081351088651.html"/>
     <updated>2020-12-17T00:11:48+08:00</updated>
-    <id>http://www.own6.com/16081351088651.html</id>
+    <id>http://tech.pca7.com/16081351088651.html</id>
     <content type="html"><![CDATA[
 <h2 id="toc_0">概述</h2>
 
