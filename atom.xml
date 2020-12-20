@@ -4,7 +4,7 @@
   <title><![CDATA[Ciroy的技术笔记]]></title>
   <link href="http://www.ciroy.com/atom.xml" rel="self"/>
   <link href="http://www.ciroy.com/"/>
-  <updated>2020-12-20T13:46:56+08:00</updated>
+  <updated>2020-12-20T13:49:26+08:00</updated>
   <id>http://www.ciroy.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -451,7 +451,7 @@ grep -c 仅显示找到的行数</p></li>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[前端资料大全]]></title>
+    <title type="html"><![CDATA[前端资料大全 2]]></title>
     <link href="http://www.ciroy.com/16068415032223.html"/>
     <updated>2020-12-02T00:51:43+08:00</updated>
     <id>http://www.ciroy.com/16068415032223.html</id>
